@@ -1,4 +1,4 @@
-const reverseString = function(word) {
+function reverseString(word) {
     const wordLength = word.length;
     var stack = [];
     var reversedWord = "";
@@ -7,9 +7,12 @@ const reverseString = function(word) {
         stack.push(word[index]);
     }
     for(index = wordLength - 1; index >= 0; index--){
-        reversedWord += stack.pop[index];
+        console.log(index + word[index]);
+        reversedWord += stack.pop(index);
     }
+    console.log(reversedWord);
     return reversedWord;
+
 };
 
 // Do not edit below this line
