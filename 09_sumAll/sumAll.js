@@ -1,6 +1,11 @@
 const sumAll = function(begin, end) {
-    if(!begin.isInteger() || begin < 0 || !end.isInteger || end < 0){
+    if(!Number.isInteger(begin) || begin < 0 || !Number.isInteger(end) || end < 0){
         return "ERROR";
+    }
+    if(end < begin){
+        begin = begin ^ end;
+        end = begin ^ end;
+        begin = begin ^ end;
     }
     let sum = 0;
     for(begin; begin <= end; begin++){
